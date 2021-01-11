@@ -1,5 +1,10 @@
+---
+VISUALIZING AGE-SEX COMPOSITION OF CONFIRMED CORONAVIRUS CASES IN ESWATINI SINCE MARCH 2020
+---
 
-<title>VISUALIZING AGE-SEX COMPOSITION OF CONFIRMED CORONAVIRUS CASES IN ESWATINI SINCE MARCH 2020</title>
+
+<img align="centre" src="Images/Eswatini_CoVID_Pyramid.gif>
+
 
 
 ## Introduction 😎
@@ -35,7 +40,7 @@ library (tidyverse)   # Data wrangling::
                         # tidyr::pivot_longer(), pivot_longer()
 ```
 
-You will also need to download a few files, including the national flag for Eswatini. You can download📥the relevant image from my [**OneDrive folder**](https://1drv.ms/u/s!AkqPZGDYHqgwiZFGK-ZbnH9j0hsfDQ?e=xUQqDE). Besides, we will import all the relevant fonts for the graphics using `showtext`📦. For this animation, I used *Decima+ Light.otf* for texts, Montserrat for the graphic title, and *RobotoCondensed-LightItalic.ttf* for the caption. I have also bundled all of these fonts for easy download via my [**OneDrive folder**](https://1drv.ms/u/s!AkqPZGDYHqgwibc0OjVjWadhRhDF_w?e=ybs2G6). In the lines of code below, each font is nested in an if-else statement so that an alternative font *ARIALN.ttf* is used if R is unable to find the corresponding font in the fonts directory of your laptop. You may also need to edit/adjust the command to point to the relevant directory if you are a macOS user.
+We will also need to import all the relevant fonts for the graphics using `showtext`📦. For this animation, I used *Decima+ Light.otf* for texts, Montserrat for the graphic title, and *RobotoCondensed-LightItalic.ttf* for the caption. I have bundled all of these fonts for you in a [**GitHub repository**](https://github.com/eolamijuwon/Eswatini_CoverAGE/tree/main/Fonts). You will need to download, 📥 and install each of the fonts for this to work properly. In the lines of code below, each font is nested in an if-else statement so that an alternative font *ARIALN.ttf* is used if R is unable to find the corresponding font in the fonts directory of your laptop. You may also need to edit/adjust the command to point to the relevant directory if you are a macOS user.
 
 ```{r}
     showtext_auto()
@@ -105,7 +110,7 @@ cases <- read.csv(text=getURL("https://raw.githubusercontent.com/CSSEGISandData/
 
 ```
 
--   We will also overlay the visualization with the country's flag, as earlier mentioned. To do this, we will need to create a dedicated folder for this project on your computer to enhance reproducibility. Move the national flag into this folder and use the `setwd()` function to point to the folder on your computer. E.g: `setwd("C:/Users/RstatUser/Animating Coronavirus/")`
+-   We will also overlay the visualization with the country's flag, as earlier mentioned. To do this, we will download the image directly from GitHub to R using the `imager` package.
 
 ```{r warning=FALSE}
 eswatini_logo <- load.image("https://raw.githubusercontent.com/eolamijuwon/Eswatini_CoverAGE/main/Images/Eswatini_flag.png")
