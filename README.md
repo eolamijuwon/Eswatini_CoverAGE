@@ -346,7 +346,7 @@ animate(
   height = 1800,
   start_pause = 2,
   end_pause = 90,
-  renderer = gifski_renderer("Eswatini_CoVID_Pyramid.gif"))
+  renderer = gifski_renderer("Images/Eswatini_CoVID_Pyramid.gif"))
 
 ```
 
