@@ -2,9 +2,7 @@
 VISUALIZING AGE-SEX COMPOSITION OF CONFIRMED CORONAVIRUS CASES IN ESWATINI SINCE MARCH 2020
 ---
 
-
-<img align="centre" src="Images/Eswatini_CoVID_Pyramid.gif>
-
+<img align="centre" src="Images/Eswatini_CoVID_Pyramid.gif">
 
 
 ## Introduction 😎
